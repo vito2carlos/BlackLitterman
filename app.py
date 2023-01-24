@@ -89,7 +89,7 @@ views_column = [
                 [pg.HorizontalSeparator()],
                 [pg.Text('')],
                 [pg.Listbox(values=[],size=(65,4), enable_events=True, key='list')],
-                [pg.Text('                                              '),
+                [pg.Text('                                       '),
                  pg.Button('Submit', image_data=download3, button_color=('white', pg.theme_background_color()), border_width=0, ),
                  pg.Button('Restart', image_data=download3, button_color=('white', pg.theme_background_color()), border_width=0, )],
                 ]
