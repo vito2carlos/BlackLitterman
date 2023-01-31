@@ -85,7 +85,7 @@ views_column = [
                  pg.VSeperator(),
                  pg.Text(' Taux sans rique:\n(Par defaut: 2%)'), pg.InputText(size=(3,1)), pg.Text('%'),
                  pg.VSeperator(),
-                 pg.Text('      Tau:\n(Par defaut: 1)'), pg.InputText(size=(5,1))],
+                 pg.Text('      Tau:\n(Par defaut:0.07)'), pg.InputText(size=(5,1))],
                 [pg.HorizontalSeparator()],
                 [pg.Text('')],
                 [pg.Listbox(values=[],size=(65,4), enable_events=True, key='list')],
@@ -126,7 +126,7 @@ omega = None
 k = 0
 delta = 0.05
 rf = 0.02
-tau = 1
+tau = 0.07027888706
 while True:
     plt.show()
     event ,values = window.read()
@@ -178,7 +178,7 @@ while True:
         omega = None
         delta = 0.05
         rf = 0.02
-        tau = 1
+        tau = 0.07027888706
         k = 0
 
     elif event == 'Submit':
@@ -197,7 +197,7 @@ while True:
         if values[13] != '':
             tau = float(values[13])
         else:
-            tau = 1
+            tau = 0.07027888706
 
     elif event == 'Rendements\nde marché':
         bl = BlackLitterman(sigma=cov, prime_de_risque=delta, taux_sans_risque=rf)
