@@ -34,12 +34,15 @@ def make_dpi_aware():
     if int(platform.release()) >= 8:
         ctypes.windll.shcore.SetProcessDpiAwareness(True)
 make_dpi_aware()
+
 def autopct(x):
     if x == 0:
         return None
     return int(x * 10) / 10
+
 def to_pct_sqr(x):
     return (x/100)*(x/100) 
+
 def aview_to_matrix(boite):
     a = np.zeros((1, n)); 
     id = 0
@@ -47,6 +50,7 @@ def aview_to_matrix(boite):
         id = id + 1
     a[0][id] = 1
     return a
+
 def rview_to_matrix(boite1, boite2):
     a = np.zeros((1, n))
     id = 0
@@ -128,6 +132,7 @@ k = 0
 delta = 0.05
 rf = 0.02
 tau = 0.07027888706
+
 while True:
     plt.show()
     event ,values = window.read()
@@ -247,5 +252,5 @@ while True:
         create_table(headers.tolist(), data_array.tolist())
 
     window['list'].update(views_list)
-window.close()
 
+window.close()

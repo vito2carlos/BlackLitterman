@@ -12,23 +12,23 @@ class BlackLitterman:
 
     -Inputs:
 
-        "sigma":    la matrice de covariance
+        "sigma":    matrice de covariance
                     type: (NxN) pd.DataFrame
-        "Q":        le vecteur des anticipations
+        "Q":        vecteur des anticipations
                     type: (Kx1) np.ndarray
-        "P":        la matrice des poids des anticipations (matrice de passage)
+        "P":        matrice des poids des anticipations (matrice de passage)
                     type: (KxN) np.ndarray
-        "omega":    la matrice (diagonale) d'incertitude sur les anticipations
+        "omega":    matrice (diagonale) d'incertitude sur les anticipations
                     type: (KxK) np.ndarray
-        "tau":      le facteur d'incertitude sur le marché
+        "tau":      facteur d'incertitude sur le marché
                     tau est fort => l'incertitude est forte
                     type: float
 
         "marche_poids":         les pondérations des actifs dans le portefeuille de marché
                                 type: pd.DataFrame ou pd.Series
-        "prime_de_risque":      la prime de risque
+        "prime_de_risque":      prime de risque
                                 type: float
-        "taux_sans_risque":     le rendement de l'actif non risqué
+        "taux_sans_risque":     rendement de l'actif non risqué
                                 type: float
     
     -Methodes:
@@ -124,4 +124,3 @@ class BlackLitterman:
         poids_bl = np.linalg.solve(A, b)
         self.poids_bl = pd.DataFrame(poids_bl.round(16), index=self.sigma.index, columns=['Poids de Black-Litterman'])
         return self.poids_bl
-

@@ -66,15 +66,15 @@ class FrontiereEfficiente:
     
     -Inputs:
 
-        "rendements":           les rendements annuels esperés des actions
+        "rendements":           rendements annuels esperés des actions
                                 type: pd.DataFrame ou np.ndarray
-        "cov_matrice":          la matrice de covariance
+        "cov_matrice":          matrice de covariance
                                 type: pd.DataFrame ou np.ndarray
-        "prime_de_risque":      la prime de risque
+        "prime_de_risque":      prime de risque
                                 type: float
-        "taux_sans_risque":     le rendement de l'actif non risqué
+        "taux_sans_risque":     rendement de l'actif non risqué
                                 type: float
-        "n_actions":            le nombre des actions
+        "n_actions":            nombre des actions
                                 type: int
 
     -Methodes:
@@ -191,20 +191,3 @@ class FrontiereEfficiente:
         r = self.rendement()
         s = self.risque()
         return (r - self.taux_sans_risque) / s
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
