@@ -5,6 +5,7 @@ subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'pandas'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'cvxpy'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'matplotlib'])
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'PySimpleGUI'])
+subprocess.call
 import numpy as np
 import pandas as pd
 import matplotlib
