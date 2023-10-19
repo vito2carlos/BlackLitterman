@@ -16,4 +16,4 @@ To run the application, please run the lines below.
 ```shell
 $ git clone https://github.com/vito2carlos/BlackLitterman.git
 $ cd BlackLitterman
-$ python3 ./app.py
+$ python3 app.py
