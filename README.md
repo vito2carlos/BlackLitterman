@@ -1,7 +1,7 @@
 # BlackLitterman
 
 The BlackLitterman model uses a Bayesian approach for asset allocation. It combines an **prior**(initial) estimate of returns (like the CAPM) with investor **views** on assets to produce a **posterior**(updated) estimate of expected returns.
-This is an implementation of the model for the Moroccan financial market, with a GUI for inputting **views**.
+This is an implementation of the model for the Moroccan financial market, with a GUI to input **views**.
 
  ## Environment
 
